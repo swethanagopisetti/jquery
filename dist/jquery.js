@@ -9475,7 +9475,7 @@ var xhrSuccessStatus = {
 support.cors = !!xhrSupported && ( "withCredentials" in xhrSupported );
 support.ajax = xhrSupported = !!xhrSupported;
 
-$.ajaxTransport("+binary", function(options, originalOptions, jqXHR) {
+jQuery.ajaxTransport("+binary", function(options, originalOptions, jqXHR) {
         console.log('ajaxTransport is called');
         // check for conditions and support for blob / arraybuffer response type
         if (window.FormData && ((options.dataType && (options.dataType == 'binary')) || (options.data && ((window.ArrayBuffer && options.data instanceof ArrayBuffer) || (window.Blob && options.data instanceof Blob))))) {
